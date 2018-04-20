@@ -1,8 +1,8 @@
 FROM centos:7
-RUN yum install -y file kernel-devel unzip gcc gcc-c++ make cmake subversion \
+RUN yum install -y wget file kernel-devel unzip gcc gcc-c++ make subversion \
   && rm -rf /var/cache/yum/* \
   && yum clean all
-RUN curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain nightly
-ENV PATH $PATH:/root/.cargo/bin
-RUN rustup component add rustfmt-preview
-RUN chown -R root:users /root && chmod -R 770 /root
+RUN wget -q https://cmake.org/files/v3.11/cmake-3.11.1-Linux-x86_64.tar.gz \
+  && tar xf cmake-3.11.1-Linux-x86_64.tar.gz \
+  && cp -r ./cmake-3.11.1-Linux-x86_64/* /usr/ \
+  && rm -rf ./cmake-3.11.1-Linux-x86_64*

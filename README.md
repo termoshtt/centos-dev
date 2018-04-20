@@ -1,6 +1,6 @@
-termoshtt/rust-centos image
+termoshtt/centos-dev image
 ============================
 
-[![DockerHub](https://img.shields.io/docker/automated/termoshtt/rust-centos.svg)](https://hub.docker.com/r/termoshtt/rust-centos/)
+[![DockerHub](https://img.shields.io/docker/automated/termoshtt/centos-dev.svg)](https://hub.docker.com/r/termoshtt/centos-dev/)
 
-Rust image on CentOS 7 with basic development tools
+CentOS 7 with basic development tools
