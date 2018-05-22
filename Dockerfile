@@ -5,6 +5,7 @@ RUN yum install -y \
   gcc-c++ \
   kernel-devel \
   make \
+  python-setuptools \
   rsync \
   ruby \
   subversion \
@@ -23,5 +24,5 @@ RUN wget -q https://dl.bintray.com/boostorg/release/1.67.0/source/boost_1_67_0.t
   && pushd boost_1_67_0 \
   && ./bootstrap.sh \
   && ./b2 install -j4 --prefix=/usr \
-  && popd
+  && popd \
   && rm -rf boost*
